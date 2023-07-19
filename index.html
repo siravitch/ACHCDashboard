@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ACHC Monitor</title>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+  </head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <main class="main">
+
+
+    <div class="gauge-container" id="server-name">
+      <div class="col-char-one">
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="gauge-container" id="server-name">
+
+      <div class="col-chart">
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+        <div class="center">
+          <div class="gauge1"></div>
+        </div>
+        <div class="center">
+          <div class="gauge1"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <canvas id="myChart" style="max-width:1200px; margin: auto;"></canvas>
+
+    <!-- <button id="random" class="button">Random value</button> -->
+    <!-- <h1 class="main__title">
+      <p id="NameSystem"></p>
+    </h1>
+
+
+    <div class="gauge-container" id="server-name">
+      <div class="col-chart">
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+        <div class="center">
+          <div class="gauge"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <form action="http://b2ercoding.servebeer.com:2566/select" method="post">
+      <input type="date" id="date" name="date" value="<%- dateSelect %>" onchange="this.form.submit()">
+    </form>
+
+    <canvas id="myChart" style="max-width:1200px; margin: auto;"></canvas>
+
+    <table id="headerTable"></table> -->
+    <!-- <button id="btnExport" class="button" onclick="fnExcelReport();"> EXPORT </button> -->
+  </main>
+
+
+
+  <svg width="0" height="0" version="1.1" class="gradient-mask" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradientGauge">
+        <stop class="color-red" offset="0%" />
+        <stop class="color-yellow" offset="17%" />
+        <stop class="color-green" offset="40%" />
+        <stop class="color-yellow" offset="87%" />
+        <stop class="color-red" offset="100%" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
+  <script src='https://cdn3.devexpress.com/jslib/17.1.6/js/dx.all.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    function timedRefresh(timeoutPeriod) {
+      setTimeout("location.reload(true);", timeoutPeriod);
+    }
+
+    window.onload = timedRefresh(2800000);
+  </script>
+
+</body>
+
+</html>
